@@ -1,0 +1,115 @@
+						#######################################
+						#                                     #
+						#                 |                   #
+						#      -    COMANDOS LINUX    -       #
+						#                 |                   #
+						#                                     #
+						#######################################
+						
+touch                                               comando para criar um arquivo
+sed s/trocar/trocado/g arquivo.txt > arquito1.txt   comando para trocar a palavra trocar por trocado dentro do arquivo
+netstat -vantup | grep LIST                         Ver em que porta ele ta escutando
+whereis                                             encontra de onde está sendo executado
+lsblk                                              	Mostra a arvore de criação dos grupos
+yum install xorg-x11-xauth							máquina com banco de dados oracle
+echo 3 > /proc/sys/vm/drop_caches                   limpar cache
+mpstat -P ALL                                       Ver a utilização de recursos do processador(tem que instalar o mpstat)
+mkdir NOME_DA_PASTA                                 criacao de diretorio
+ldconfig                                            le as libs de novo
+/etc/exports                                        configurações do NFS
+nscd -i                                             limpa o dns
+find /path/to/files* -mtime +30 -exec rm {} \;      Limpar diretório levando em consideração o tempo 
+cp arquivo arquivoCopia                             copiar arquivo
+cp -R direotiro direotioCOpia                       copiar diretorio
+ntpdate SERVIDOR_HORARIO                            atualiza o horário baseado em outra máquina
+loadkeys  us                                        ALtera o teclado no linux
+rm -rf /opt/                                        para remover um diretorio
+ifconfig                                            mostra IP
+chmod                                               da permissoes no arquivo
+chown                                               altera o dono do arquivo
+chkconfig servico on                                Ativa serviço, desativa serviço
+fstab                                               Lido na inicialização do sistema e é quem diz ao sistema o que montar, onde montar e os parâmetros de montagem. 
+whoami ->                                           Comando pra saber quem está logado
+ifup eth0                                           up na interface
+snmpwalk -v 2c -c comunnity localhost              saber se o serviço snmp está rodando
+umount                                              desmontar a partição
+umount -f força o desmontar -l desmonta em todos os lugares
+bg                                                  coloca o processo em segundo plano
+ps -ef | grep #SNMP-QUALQUER COISA#                 pesquisar serviços ativos                            
+gzip -c nome do arqivo > nome novo do arq           compactar a máquina
+zzzz &                                              inicio o programa em segundo plano
+pwd                                                 mostra o diretorio atual
+gshadow   											informações do grupo em arquivo shadow
+shadow                                              senhas do linux
+grep PALAVRA arquivo.TXT                            encontrar o texto PALAVRA dentro do arquivo.TXT
+nice                                                comando para definir prioridade de execução do processo
+renice                                              comando para redefinir prioridade de execução do processo
+man                                                 comando pra ver o que outros comandos fazem
+cat /etc/*-release                                  comando para ver a versão do linux
+split                                               comando para dividir arquivos em 2 pedaços por exemplo
+tracepath                                           comando que mostra o tamanho maximo de MTU
+yum whatprovides                                    comando para buscar alteração
+cat /etc/issue                                      ver que versão tem do linux
+/bin/bash ->                                        Comando zuado
+cat /proc/cpuinfo                                   Ver o numero de processador
+df -h                                               Mostra o tamanho dos disco
+du -sh *                                            mostra o tamanho utilizado por algum arquivo ou usuário se no caso der o comando du /home/adm.mb21078
+/etc/group                                          add user no grupo
+/etc/sysconfig/network-scripts/ifcfg-ethX           defini qual interface deve ligar já no boot da máquina
+/usr/bin/vmware-config-tools.pl                     Instalar o vmware no linux
+/etc/sysconfig/network                              para mudar o hostname da maquina
+system-config-network                               para colocar a configuração de rede fixa
+visudo                                              dou permissao dos usuáros pra eles poderem executar os comandos quando estão como su                                         
+w                                                   ve quais users estão logados
+/var/log/secure                                     lsita as tentativas de acesso
+ps -aux                                             lista os serviços ativos
+yum localinstall    nomeDoExe                       instalar um programa baixo pela net
+export JAVA_HOME = diretorio onde esta o java       setando a variavel java
+java -version                                       verifica a versão do java
+vi /etc/pam.d/system-auth                           erro do passwd
+
+COMANDOS PARA POR IP NO LINUX
+    ip addr add x.x.x.x/x dev eth0
+    remover: ip addr del a.b.c.d/xyz dev eth0	
+DEFINIR BROADCAST E IP
+    ifconfig eth0 x.x.x.x netmask 255.255.255.0 broadcast 192.168.254.255
+DEFINIR GATWAY
+    ip route add default via 192.168.1.1
+------------------------------------
+    --
+Aumento de disco 
+pvcreate /dev/sdb2
+vgextend vg0 /dev/sdb2
+vgdisplay
+lvextend -l +100%FREE /dev/mapper/vg0-lv0_u01
+resize2fs /dev/mapper/vg0-lv0_u01
+df -h 
+--
+Alterando SHEEL de usuario 
+SHELL_CSH=`which csh`
+groupadd ctmag
+cd /home/ctmag
+/home/ctmag/ctm/scripts/shut-ag -u ctmag -p ALL
+wget url_download.com 
+
+
+						#######################################
+						#                                     #
+						#                 |                   #
+						#      -    COMANDOS GIT    -       #
+						#                 |                   #
+						#                                     #
+						#######################################
+
+git clone url_repositorio.com
+git status
+git branch
+git checkout -b nome_da_branch
+git log
+git add -A
+git status
+git pull
+git commit -a -m "mensgaem do commit"
+git push 
+
+
