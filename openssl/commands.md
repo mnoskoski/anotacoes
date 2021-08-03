@@ -1,9 +1,10 @@
 #OPENSSL - COMMANDS
 
-create CSR: 
+* create CSR:
 openssl req -newkey rsa:2048 -keyout req-certificate.key -out req-certificate.csr
 
-* Remove the password of certificate:
+* Remove the password of certificate: 
+
 openssl rsa -in req-certificate.key -out req-certificate-wildcard-no-pass.key
 
 * Create certificate .pem
